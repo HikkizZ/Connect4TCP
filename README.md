@@ -6,6 +6,7 @@ Este proyecto es parte de la tarea 1 de programación del curso de Comunicación
 
 El proyecto está organizado en dos subdirectorios para separar las responsabilidades del cliente y del servidor:
 
+```
 Connect4/
 ├── Cliente/
 │ ├── README.md
@@ -16,6 +17,7 @@ Connect4/
 │ ├── Server.cpp
 │ └── Makefile
 ├── README.md
+```
 
 ## Compilación y Ejecución
 
@@ -51,4 +53,5 @@ Para compilar y ejecutar el cliente, sigue estos pasos:
 - Felipe Miranda Rebolledo
 
 Ingeniería Civil en Informática
+
 Universidad del Bio bio
