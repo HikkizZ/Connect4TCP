@@ -41,7 +41,7 @@ private:
     std::vector<std::thread> client_threads;
 
     void client(int cliente_socket, const char* cliente_ip, int cliente_port);
-    void tablero(char tablero[ROW][COL]);
+    void tablero_init(char tablero[ROW][COL]);
     bool check_winner(char tablero[ROW][COL], char jugador);
     bool check_horizontal(char tablero[ROW][COL], char jugador);
     bool check_vertical(char tablero[ROW][COL], char jugador);
@@ -100,7 +100,7 @@ void Servidor::run() {
 
 void Servidor::client(int cliente_socket, const char* cliente_ip, int cliente_port) {
     char tablero[ROW][COL];
-    tablero(tablero);
+    tablero_init(tablero);
 
     char buffer[1024] = {0};
     int read_size;
@@ -183,7 +183,7 @@ void Servidor::client(int cliente_socket, const char* cliente_ip, int cliente_po
     close(cliente_socket);
 }
 
-void Servidor::tablero(char tablero[ROW][COL]) {
+void Servidor::tablero_init(char tablero[ROW][COL]) {
     for (int f = 0; f < ROW; ++f) {
         for (int c = 0; c < COL; ++c) {
             tablero[f][c] = '-';
