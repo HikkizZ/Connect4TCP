@@ -2,12 +2,12 @@
 
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -Wextra -pthread
-TARGET = server
+TARGET = Server
 
 all: $(TARGET)
 
-$(TARGET): server.cpp
-	$(CXX) $(CXXFLAGS) server.cpp -o $(TARGET)
+$(TARGET): Server.cpp
+	$(CXX) $(CXXFLAGS) Server.cpp -o $(TARGET)
 
 clean:
 	rm -f $(TARGET)
